@@ -1,0 +1,483 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Wedding Fia & Romi</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Caveat+Brush&family=Kaushan+Script&family=Patrick+Hand&family=Special+Elite&display=swap">
+<style>
+/* Layout: satu kolom krem ala undangan TikTok; ilustrasi tangan, judul skrip marun, satu blok kertas robek marun sebagai pusat acara */
+:root {
+  --cream: #f4f0eb;
+  --paper: #fffaf6;
+  --maroon: #6a1a33;
+  --maroon-deep: #561428;
+  --pink: #f1c1cc;
+  --navy: #27304f;
+  --line: #d9c9c9;
+  --script: 'Kaushan Script', 'Brush Script MT', cursive;
+  --brush: 'Caveat Brush', 'Comic Sans MS', cursive;
+  --hand: 'Patrick Hand', 'Comic Sans MS', system-ui, sans-serif;
+  --type: 'Special Elite', 'Courier New', monospace;
+  --arab: 'Amiri', 'Traditional Arabic', serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body {
+  background: #e9e2dc;
+  color: var(--maroon);
+  font-family: var(--hand);
+  font-size: 18px;
+  line-height: 1.5;
+}
+.col { max-width: 520px; margin-inline: auto; background: var(--cream); overflow: hidden; }
+.pad { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+p { margin: 0; }
+h1, h2, h3 { margin: 0; font-weight: 400; text-wrap: balance; }
+.script { font-family: var(--script); color: var(--maroon); line-height: 1.1; }
+.center { text-align: center; }
+.defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+/* COVER */
+.cover { padding-block: 40px 52px; display: grid; gap: 8px; justify-items: center; }
+.cover h1 { font-size: clamp(2.7rem, 13.5vw, 3.9rem); transform: rotate(-3deg); }
+.duo { position: relative; width: 100%; max-width: 440px; margin-top: 18px; }
+.duo > svg.couple { display: block; width: 80%; margin-inline: auto; }
+.duo .n { position: absolute; font-family: var(--brush); font-size: clamp(1.9rem, 9.5vw, 2.7rem); color: var(--maroon); line-height: 1; }
+.duo .n1 { left: 0; top: 34%; transform: rotate(-9deg); }
+.duo .n2 { right: 0; top: 28%; transform: rotate(5deg); }
+.heart { position: absolute; fill: none; stroke: var(--maroon); stroke-width: 1.6; }
+.heart.solid { fill: var(--maroon); stroke: var(--maroon); }
+.h1 { width: 34px; left: 6%; top: 8%; }
+.h2 { width: 44px; left: 41%; top: -4%; }
+.h3 { width: 34px; right: 5%; top: 8%; }
+.h4 { width: 46px; left: 2%; top: 56%; }
+.bar { position: relative; margin-top: -40px; background: var(--pink); clip-path: polygon(1% 14%, 99% 0, 100% 78%, 96% 100%, 3% 90%, 0 48%); padding: 20px 26px 18px; text-align: center; width: 100%; max-width: 440px; font-size: 19px; line-height: 1.3; }
+.date { font-family: var(--type); letter-spacing: 0.14em; font-size: 21px; margin-top: 12px; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 26px;
+  background: var(--maroon); color: #fff; border: 0; border-radius: 999px; text-decoration: none; cursor: pointer;
+  font: 400 19px/1 var(--script);
+}
+.btn.light { background: #fff; color: var(--maroon); }
+.btn.line { background: transparent; color: var(--maroon); border: 2px solid var(--maroon); }
+.btn[aria-disabled="true"] { opacity: 0.5; pointer-events: none; }
+:focus-visible { outline: 3px solid var(--pink); outline-offset: 3px; box-shadow: 0 0 0 5px var(--maroon); }
+@media (prefers-reduced-motion: no-preference) {
+  .beat { animation: beat 2.4s ease-in-out infinite; transform-origin: center; }
+  @keyframes beat { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.12); } }
+}
+
+/* MUSIK */
+.music { padding-block: 40px 56px; display: grid; gap: 14px; justify-items: center; text-align: center; }
+.player { width: 100%; max-width: 300px; border: 3px solid var(--maroon); border-radius: 18px; background: var(--paper); padding: 12px 16px 14px; display: grid; gap: 8px; box-shadow: 4px 4px 0 var(--pink); }
+.player .track { font-size: 15px; letter-spacing: 0.04em; }
+.ctrls { display: flex; justify-content: center; align-items: center; gap: 18px; }
+.ctrls button { width: 40px; height: 40px; border-radius: 50%; border: 2px solid var(--maroon); background: transparent; color: var(--maroon); cursor: pointer; display: grid; place-items: center; padding: 0; }
+.ctrls button.main { width: 50px; height: 50px; background: var(--maroon); color: #fff; }
+.ctrls svg { width: 18px; height: 18px; fill: currentColor; }
+.bars { display: flex; gap: 3px; height: 16px; align-items: flex-end; justify-content: center; }
+.bars i { width: 4px; background: var(--maroon); height: 4px; border-radius: 2px; }
+.bars.on i { animation: eq 0.9s ease-in-out infinite; }
+.bars.on i:nth-child(2) { animation-delay: 0.15s; } .bars.on i:nth-child(3) { animation-delay: 0.3s; } .bars.on i:nth-child(4) { animation-delay: 0.45s; } .bars.on i:nth-child(5) { animation-delay: 0.6s; }
+@keyframes eq { 0%, 100% { height: 4px; } 50% { height: 16px; } }
+@media (prefers-reduced-motion: reduce) { .bars.on i { animation: none; height: 10px; } }
+.string { width: 100%; max-width: 440px; display: block; margin-top: 6px; }
+.string path.l { fill: none; stroke: var(--maroon); stroke-width: 3; stroke-linecap: round; }
+.string .hand { fill: var(--cream); stroke: var(--maroon); stroke-width: 3; }
+.duo-name { font-family: var(--brush); font-size: 1.9rem; line-height: 1; }
+.quote { max-width: 30ch; font-size: 17px; }
+.quote small { display: block; margin-top: 6px; font-family: var(--type); font-size: 13px; letter-spacing: 0.08em; }
+
+/* MEMPELAI */
+.mempelai { padding-block: 24px 48px; display: grid; gap: 28px; }
+.mempelai h2 { font-family: var(--script); font-size: clamp(2.1rem, 10vw, 2.9rem); text-align: center; }
+.rowp { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; align-items: center; }
+.rowp .who { min-width: 0; }
+.rowp .who h3 { font-family: var(--brush); font-size: 1.7rem; line-height: 1.1; }
+.rowp .who p { font-size: 16px; line-height: 1.35; margin-top: 4px; }
+.rowp.r .who { text-align: left; order: 0; }
+.rowp.l .who { text-align: left; }
+.rowp.r .frame { order: 1; }
+.frame { width: 100%; max-width: 200px; margin-inline: auto; display: block; }
+.dash { border: 2.5px dashed var(--maroon); border-radius: 26px; padding: 16px 20px; text-align: center; font-size: 17px; line-height: 1.35; margin-inline: 6px; }
+
+/* SIMPAN TANGGAL */
+.save { padding-block: 16px 56px; display: grid; gap: 14px; }
+.save .head { display: flex; align-items: center; justify-content: center; gap: 18px; }
+.save .head svg { width: 96px; flex: none; }
+.save h2 { font-family: var(--script); font-size: clamp(2rem, 10vw, 2.8rem); line-height: 1.1; }
+.month { display: flex; justify-content: space-between; font-family: var(--type); font-size: 20px; padding-inline: 4px; color: #2b1a20; }
+.cal { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 2.5px solid var(--maroon); border-bottom: 2.5px solid var(--maroon); }
+.cal > div { padding: 8px 4px 12px; display: grid; justify-items: center; gap: 4px; position: relative; }
+.cal > div + div { border-left: 2.5px solid var(--maroon); }
+.cal .dn { font-family: var(--script); font-size: 1.5rem; }
+.cal .num { font-family: var(--type); font-size: 20px; color: #2b1a20; min-height: 74px; display: grid; place-items: center; position: relative; width: 100%; }
+.cal .num svg { position: absolute; width: 84px; left: 50%; top: 50%; transform: translate(-50%, -50%); fill: none; stroke: var(--maroon); stroke-width: 2.4; }
+.cal .num b { position: relative; font-weight: 400; }
+
+/* ACARA: kertas robek marun */
+.tear { background: var(--maroon); color: #fff; position: relative; margin-top: 0; }
+.tear svg.edge { display: block; width: 100%; height: 34px; margin-top: -33px; fill: var(--maroon); }
+.tear .in { padding-block: 24px 40px; display: grid; grid-template-columns: minmax(0, 1fr) 92px; gap: 14px; align-items: center; }
+.events { display: grid; gap: 26px; min-width: 0; }
+.ev { display: grid; gap: 4px; justify-items: start; }
+.ev h3 { font-family: var(--script); font-size: clamp(1.9rem, 9vw, 2.5rem); color: #fff; }
+.ev p { font-size: 17px; line-height: 1.35; color: #fff; }
+.ev .jam { font-family: var(--type); font-size: 17px; letter-spacing: 0.04em; }
+.ev .btn { margin-top: 8px; min-height: 40px; font-size: 17px; }
+.count { display: grid; gap: 12px; text-align: center; }
+.count div { display: grid; }
+.count b { font-family: var(--brush); font-weight: 400; font-size: 2.6rem; line-height: 1; font-variant-numeric: tabular-nums; }
+.count span { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.8; }
+.wave { display: block; width: 100%; height: 30px; fill: #fff; margin-bottom: -1px; }
+
+/* BISMILLAH */
+.bis { background: #fff; padding-block: 24px 60px; text-align: center; position: relative; }
+.bis .arab { font-family: var(--arab); font-size: clamp(2rem, 10vw, 2.8rem); color: var(--maroon); line-height: 1.5; }
+.bis .ayat { font-family: var(--type); font-size: 17px; line-height: 1.75; letter-spacing: 0.04em; max-width: 28ch; margin: 14px auto 0; }
+.bis .ayat small { display: block; margin-top: 8px; font-size: 15px; }
+.bis .sign { margin-top: 18px; font-family: var(--type); font-size: 17px; }
+.leaf { position: absolute; bottom: 30px; width: 54px; fill: none; stroke: var(--maroon); stroke-width: 2.2; stroke-linecap: round; }
+.leaf.a { left: 4px; } .leaf.b { right: 4px; transform: scaleX(-1); }
+
+/* HADIAH & UCAPAN */
+.gift { padding-block: 44px 20px; display: grid; gap: 14px; justify-items: center; text-align: center; }
+.gift p { max-width: 34ch; font-size: 17px; line-height: 1.4; }
+.rek { border: 2.5px dashed var(--maroon); border-radius: 22px; padding: 16px 20px; width: 100%; max-width: 340px; display: grid; gap: 4px; justify-items: center; background: var(--paper); }
+.rek .bank { font-family: var(--type); font-size: 14px; letter-spacing: 0.14em; }
+.rek .no { font-family: var(--brush); font-size: 2rem; letter-spacing: 0.04em; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.rek .note { font-size: 14px; opacity: 0.8; }
+.wish { padding-block: 28px 56px; display: grid; gap: 12px; justify-items: center; text-align: center; }
+.wish h2 { font-family: var(--script); font-size: clamp(2.2rem, 11vw, 3rem); transform: rotate(-3deg); }
+.wish .sub { font-size: 16px; line-height: 1.35; max-width: 32ch; }
+.box { background: var(--maroon); color: #fff; border-radius: 12px; padding: 20px 18px 22px; width: 100%; text-align: left; display: grid; gap: 14px; }
+.box .t { font-size: 15px; line-height: 1.35; }
+.box label, .box legend { font-family: var(--type); font-size: 14px; letter-spacing: 0.06em; display: block; margin-bottom: 6px; padding: 0; }
+.box input[type="text"], .box select, .box textarea { width: 100%; background: #fff; color: var(--maroon); border: 0; border-radius: 6px; padding: 12px; font: 400 17px/1.3 var(--hand); }
+.box textarea { min-height: 96px; resize: vertical; }
+.box fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+.opts { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.opts label { margin: 0; background: #fff; color: var(--maroon); border: 2px solid #fff; border-radius: 6px; padding: 10px 8px; text-align: center; cursor: pointer; font-family: var(--hand); font-size: 17px; letter-spacing: 0; }
+.opts input { position: absolute; opacity: 0; pointer-events: none; }
+.opts input:checked + span { background: var(--pink); }
+.opts label span { display: block; margin: -10px -8px; padding: 10px 8px; border-radius: 4px; }
+.opts label:has(input:focus-visible) { outline: 3px solid var(--pink); outline-offset: 2px; }
+.send { display: grid; gap: 8px; justify-items: center; text-align: center; }
+.send small { font-size: 14px; opacity: 0.9; }
+footer { background: var(--maroon-deep); color: #fff; text-align: center; padding-block: 36px 44px; display: grid; gap: 8px; justify-items: center; }
+footer .script { color: #fff; font-size: 2rem; }
+footer p { font-size: 16px; max-width: 32ch; line-height: 1.35; opacity: 0.9; }
+</style>
+
+<!-- simbol ilustrasi -->
+<svg class="defs" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="woman" viewBox="0 0 200 220">
+      <path d="M12 220C12 172 56 152 100 152s88 20 88 68z" fill="#fffaf2" stroke="#6a1a33" stroke-width="3.5"/>
+      <path d="M100 18C50 18 36 68 40 112c3 38-2 64-14 86h148c-12-22-17-48-14-86 4-44-10-94-60-94z" fill="#27304f" stroke="#6a1a33" stroke-width="3.5" stroke-linejoin="round"/>
+      <ellipse cx="100" cy="102" rx="39" ry="47" fill="#f6cba6"/>
+      <path d="M60 92C64 56 136 56 140 92 128 74 72 74 60 92z" fill="#27304f"/>
+      <circle cx="86" cy="106" r="3.8" fill="#3a2424"/><circle cx="114" cy="106" r="3.8" fill="#3a2424"/>
+      <circle cx="76" cy="121" r="7.5" fill="#ee9a9a" opacity=".65"/><circle cx="124" cy="121" r="7.5" fill="#ee9a9a" opacity=".65"/>
+      <path d="M91 128q9 8 18 0" fill="none" stroke="#b5483f" stroke-width="2.6" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="man" viewBox="0 0 200 220">
+      <path d="M12 220C12 176 54 156 100 156s88 20 88 64z" fill="#fffaf2" stroke="#6a1a33" stroke-width="3.5"/>
+      <rect x="85" y="128" width="30" height="32" rx="8" fill="#f1bf98"/>
+      <ellipse cx="60" cy="102" rx="8" ry="11" fill="#f1bf98"/><ellipse cx="140" cy="102" rx="8" ry="11" fill="#f1bf98"/>
+      <ellipse cx="100" cy="96" rx="41" ry="49" fill="#f6cba6"/>
+      <path d="M57 92C50 40 84 26 102 26c28 0 52 16 42 66-6-26-22-34-44-34S63 66 57 92z" fill="#1f1a1a"/>
+      <circle cx="86" cy="104" r="3.8" fill="#3a2424"/><circle cx="114" cy="104" r="3.8" fill="#3a2424"/>
+      <circle cx="75" cy="119" r="7.5" fill="#ee9a9a" opacity=".65"/><circle cx="125" cy="119" r="7.5" fill="#ee9a9a" opacity=".65"/>
+      <path d="M91 126q9 8 18 0" fill="none" stroke="#b5483f" stroke-width="2.6" stroke-linecap="round"/>
+      <path d="M84 158l16 20 16-20" fill="#fffaf2" stroke="#6a1a33" stroke-width="3" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="flower" viewBox="0 0 30 30">
+      <g fill="#e66a5c"><circle cx="15" cy="7" r="5.5"/><circle cx="23" cy="15" r="5.5"/><circle cx="15" cy="23" r="5.5"/><circle cx="7" cy="15" r="5.5"/></g>
+      <circle cx="15" cy="15" r="4.5" fill="#f3c24f"/>
+    </symbol>
+    <symbol id="heartp" viewBox="0 0 24 24"><path d="M12 21s-8-5.5-8-11a4.5 4.5 0 0 1 8-2.5A4.5 4.5 0 0 1 20 10c0 5.5-8 11-8 11z"/></symbol>
+    <clipPath id="ov"><ellipse cx="80" cy="100" rx="60" ry="80"/></clipPath>
+  </defs>
+</svg>
+
+<main class="col">
+
+  <!-- COVER -->
+  <header class="cover pad center">
+    <h1 class="script">Kami Menikah!</h1>
+    <div class="duo">
+      <svg class="heart h1" viewBox="0 0 24 24" aria-hidden="true"><use href="#heartp"/></svg>
+      <svg class="heart solid h2 beat" viewBox="0 0 24 24" aria-hidden="true"><use href="#heartp"/></svg>
+      <svg class="heart h3" viewBox="0 0 24 24" aria-hidden="true"><use href="#heartp"/></svg>
+      <svg class="heart solid h4" viewBox="0 0 24 24" aria-hidden="true"><use href="#heartp"/></svg>
+      <span class="n n1">Fia</span>
+      <span class="n n2">Romi</span>
+      <svg class="couple" viewBox="0 0 400 290" role="img" aria-label="Ilustrasi mempelai wanita berhijab dan mempelai pria">
+        <use href="#man" x="170" y="0" width="200" height="220"/>
+        <use href="#woman" x="28" y="22" width="190" height="209"/>
+        <use href="#flower" x="48" y="200" width="30" height="30"/>
+        <use href="#flower" x="112" y="214" width="26" height="26"/>
+        <use href="#flower" x="296" y="196" width="32" height="32"/>
+        <use href="#flower" x="340" y="214" width="24" height="24"/>
+        <g fill="#6f9a6a"><ellipse cx="92" cy="206" rx="5" ry="13" transform="rotate(-30 92 206)"/><ellipse cx="270" cy="214" rx="5" ry="13" transform="rotate(25 270 214)"/><ellipse cx="326" cy="236" rx="5" ry="12" transform="rotate(-20 326 236)"/></g>
+      </svg>
+    </div>
+    <div class="bar">“Perayaan cinta, tawa, dan awal dari selamanya kami”</div>
+    <p class="date">27.03.2027</p>
+    <a class="btn" href="#musik" style="margin-top:14px">Buka Undangan</a>
+  </header>
+
+  <!-- MUSIK + AYAT -->
+  <section class="music pad" id="musik">
+    <p class="quote">Nyalakan musik dan nikmati pengalaman undangan kami</p>
+    <div class="player" role="group" aria-label="Pemutar musik">
+      <p class="track" id="track">Nada 1 · Melodi lembut</p>
+      <div class="bars" id="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="ctrls">
+        <button type="button" id="prev" aria-label="Nada sebelumnya"><svg viewBox="0 0 24 24"><path d="M6 5h2v14H6zM20 5v14L9 12z"/></svg></button>
+        <button type="button" class="main" id="play" aria-label="Putar musik"><svg viewBox="0 0 24 24" id="ico"><path d="M8 5v14l11-7z"/></svg></button>
+        <button type="button" id="next" aria-label="Nada berikutnya"><svg viewBox="0 0 24 24"><path d="M16 5h2v14h-2zM4 5l11 7-11 7z"/></svg></button>
+      </div>
+    </div>
+    <svg class="string" viewBox="0 0 400 170" role="img" aria-label="Dua tangan memegang benang dengan simpul hati">
+      <path class="l" d="M16 44C110 160 290 160 384 44"/>
+      <path class="l" d="M-4 150C8 110 4 80 16 54" />
+      <path class="l" d="M404 150C392 110 396 80 384 54" />
+      <circle class="hand" cx="16" cy="46" r="11"/><circle class="hand" cx="384" cy="46" r="11"/>
+      <g transform="translate(184 100) scale(1.35)"><use href="#heartp" width="24" height="24" fill="#f4f0eb" stroke="#6a1a33" stroke-width="2"/></g>
+    </svg>
+    <p class="duo-name">Fia &amp; Romi</p>
+    <p class="quote">“Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu merasa tenteram kepadanya.”<small>QS. Ar-Rum: 21</small></p>
+  </section>
+
+  <!-- MEMPELAI -->
+  <section class="mempelai pad">
+    <h2>Mempelai Wanita &amp; Pria</h2>
+    <div class="rowp l">
+      <svg class="frame" viewBox="0 0 160 200" role="img" aria-label="Bingkai foto mempelai wanita">
+        <ellipse cx="80" cy="100" rx="75" ry="95" fill="#fffaf6" stroke="#6a1a33" stroke-width="3.5"/>
+        <ellipse cx="80" cy="100" rx="67" ry="87" fill="none" stroke="#c9758a" stroke-width="2.4" stroke-dasharray="1 6" stroke-linecap="round"/>
+        <g clip-path="url(#ov)"><rect x="10" y="10" width="140" height="180" fill="#f9e5d7"/><use href="#woman" x="20" y="50" width="120" height="132"/></g>
+        <ellipse cx="80" cy="100" rx="60" ry="80" fill="none" stroke="#6a1a33" stroke-width="2"/>
+        <use href="#flower" x="2" y="30" width="22" height="22"/><use href="#flower" x="136" y="150" width="22" height="22"/>
+      </svg>
+      <div class="who"><h3>Sitti Lutfiah Nurjannah</h3><p>Putri bungsu dari Alm.Bapak Ramli Sangadji dan Ibu Sri Linggarwati</p></div>
+    </div>
+    <div class="rowp r">
+      <div class="who"><h3>Muharromi Nugroho Habibulloh</h3><p>Putra kedua dari Alm.Bapak Chabib Sarwoto dan Ibu Ruwi Astuti</p></div>
+      <svg class="frame" viewBox="0 0 160 200" role="img" aria-label="Bingkai foto mempelai pria">
+        <ellipse cx="80" cy="100" rx="75" ry="95" fill="#fffaf6" stroke="#6a1a33" stroke-width="3.5"/>
+        <ellipse cx="80" cy="100" rx="67" ry="87" fill="none" stroke="#c9758a" stroke-width="2.4" stroke-dasharray="1 6" stroke-linecap="round"/>
+        <g clip-path="url(#ov)"><rect x="10" y="10" width="140" height="180" fill="#dfe9f0"/><use href="#man" x="20" y="46" width="120" height="132"/></g>
+        <ellipse cx="80" cy="100" rx="60" ry="80" fill="none" stroke="#6a1a33" stroke-width="2"/>
+        <use href="#flower" x="136" y="30" width="22" height="22"/><use href="#flower" x="2" y="150" width="22" height="22"/>
+      </svg>
+    </div>
+    <p class="dash">Karena cinta mempertemukan kami, kami mengundang Anda untuk merayakan awal dari selamanya kami.</p>
+  </section>
+
+  <!-- SIMPAN TANGGAL -->
+  <section class="save pad">
+    <div class="head">
+      <svg viewBox="0 0 100 90" aria-hidden="true">
+        <path d="M12 26 80 15l12 58-68 11z" fill="#fff" stroke="#1d1a1a" stroke-width="3.4" stroke-linejoin="round"/>
+        <g fill="none" stroke="#1d1a1a" stroke-width="3" stroke-linecap="round"><path d="M24 20v-8M37 18v-8M50 16v-8M63 14v-8M76 12v-8"/></g>
+        <path d="M54 62s-14-9-14-18a7.5 7.5 0 0 1 14-4 7.5 7.5 0 0 1 14 4c0 9-14 18-14 18z" fill="none" stroke="#1d1a1a" stroke-width="3" stroke-linejoin="round" transform="translate(-2 -2)"/>
+      </svg>
+      <h2>Simpan<br>Tanggalnya!</h2>
+    </div>
+    <div class="month"><span>Maret</span><span>2027</span></div>
+    <div class="cal" role="img" aria-label="Kalender Maret 2027: Jumat 26, Sabtu 27 ditandai hati, Minggu 28">
+      <div><span class="dn">Jumat</span><span class="num"><b>26</b></span></div>
+      <div><span class="dn">Sabtu</span><span class="num"><svg viewBox="0 0 24 24"><path d="M12 21s-8-5.5-8-11a4.5 4.5 0 0 1 8-2.5A4.5 4.5 0 0 1 20 10c0 5.5-8 11-8 11z"/></svg><b>27</b></span></div>
+      <div><span class="dn">Minggu</span><span class="num"><b>28</b></span></div>
+    </div>
+  </section>
+
+  <!-- ACARA -->
+  <section class="tear">
+    <svg class="edge" viewBox="0 0 400 34" preserveAspectRatio="none" aria-hidden="true"><path d="M0 34V18l20-8 20 10 22-14 23 10 25-12 22 14 25-10 25 12 25-15 25 13 25-9 25 11 25-14 25 12 25-8 18 8 8-6v30z"/></svg>
+    <div class="pad">
+      <div class="in">
+        <div class="events">
+          <div class="ev">
+            <h3>Akad Nikah</h3>
+            <p>Sabtu, 27 Maret 2027</p>
+            <p class="jam">08.00 WIB – 09.00 WIB</p>
+            <p>di Rumah Mempelai Wanita<br>Villa Mutiara Gading 1 jl. Mutiara 7 blok G 11 No. 25 Rt. 006/014 desa Setia Asih, Bekasi.</p>
+          </div>
+          <div class="ev">
+            <h3>Resepsi</h3>
+            <p>Sabtu, 27 Maret 2027</p>
+            <p class="jam">10.00 – 16.00 WIB</p>
+            <p>di tempat yang sama</p>
+            <a class="btn light" href="https://maps.app.goo.gl/3dm4cBuAC5REbyuZ8?g_st=ac" target="_blank" rel="noopener">Lihat Lokasi</a>
+          </div>
+        </div>
+        <div class="count" id="count" role="timer" aria-live="off">
+          <div><b id="cd-d">0</b><span>Hari</span></div>
+          <div><b id="cd-h">00</b><span>Jam</span></div>
+          <div><b id="cd-m">00</b><span>Menit</span></div>
+          <div><b id="cd-s">00</b><span>Detik</span></div>
+        </div>
+      </div>
+    </div>
+    <svg class="wave" viewBox="0 0 400 30" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30V14Q25-4 50 14T100 14T150 14T200 14T250 14T300 14T350 14T400 14V30z"/></svg>
+  </section>
+
+  <!-- BISMILLAH -->
+  <section class="bis pad">
+    <svg class="leaf a" viewBox="0 0 54 150" aria-hidden="true"><path d="M20 148C16 100 22 50 34 8M22 120c-10-4-16-12-16-22 10 0 16 8 16 22zM24 90c10-4 18-12 20-22-10 0-18 8-20 22zM26 62c-10-4-16-12-16-22 10 0 16 8 16 22zM30 36c8-4 14-10 16-18-8 0-14 6-16 18z"/></svg>
+    <svg class="leaf b" viewBox="0 0 54 150" aria-hidden="true"><path d="M20 148C16 100 22 50 34 8M22 120c-10-4-16-12-16-22 10 0 16 8 16 22zM24 90c10-4 18-12 20-22-10 0-18 8-20 22zM26 62c-10-4-16-12-16-22 10 0 16 8 16 22zM30 36c8-4 14-10 16-18-8 0-14 6-16 18z"/></svg>
+    <p class="arab" lang="ar" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+    <p class="ayat">“Dan segala sesuatu Kami ciptakan berpasang-pasangan agar kamu mengingat kebesaran Allah.”<small>Q.S. Adz-Dzariyat: 49</small></p>
+    <p class="sign">~ Fia &amp; Romi</p>
+  </section>
+
+  <!-- HADIAH -->
+  <section class="gift pad">
+    <p>Memikirkan hadiah? Kabari kami lewat WhatsApp dulu, nanti kami bagikan alamat kami.</p>
+    <a class="btn" href="https://wa.me/6281280587440" target="_blank" rel="noopener">Nomor WhatsApp</a>
+    <div class="rek">
+      <span class="bank">BANK BCA</span>
+      <span class="no" id="rek">521 197 0449</span>
+      <span>a.n. Sitti Lutfiah Nurjannah</span>
+      <button type="button" class="btn line" id="copy" style="margin-top:8px;min-height:40px;font-size:17px">Salin Rekening</button>
+      <span class="note" id="copy-note"></span>
+    </div>
+  </section>
+
+  <!-- UCAPAN -->
+  <section class="wish pad">
+    <h2>Tinggalkan Ucapan!</h2>
+    <p class="sub">Kabari kami apakah Anda akan merayakan bersama kami, dan tinggalkan doa serta ucapan Anda di sini.</p>
+    <form class="box" id="rsvp" autocomplete="off">
+      <p class="t">Doa dan ucapan hangat Anda sangat berarti bagi kami :)</p>
+      <div><label for="nama">Nama</label><input type="text" id="nama" placeholder="Nama Anda"></div>
+      <fieldset>
+        <legend>Kehadiran</legend>
+        <div class="opts">
+          <label for="hadir"><input type="radio" name="hadir" id="hadir" value="Insya Allah hadir" checked><span>Hadir</span></label>
+          <label for="tidak"><input type="radio" name="hadir" id="tidak" value="Mohon maaf, belum bisa hadir"><span>Tidak Hadir</span></label>
+        </div>
+      </fieldset>
+      <div><label for="jumlah">Jumlah Tamu</label>
+        <select id="jumlah"><option>1 orang</option><option>2 orang</option><option>3 orang</option><option>4 orang</option><option>5 orang</option></select></div>
+      <div><label for="ucapan">Ucapan</label><textarea id="ucapan" placeholder="Tulis doa dan ucapan untuk kami"></textarea></div>
+      <div class="send">
+        <a class="btn light" id="wa" href="#" target="_blank" rel="noopener" aria-disabled="true">Kirim via WhatsApp</a>
+        <small id="wa-note">Isi nama Anda terlebih dahulu.</small>
+      </div>
+    </form>
+  </section>
+
+  <footer class="pad">
+    <p>Merupakan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.</p>
+    <p class="script">Fia &amp; Romi</p>
+    <p>Wassalamu’alaikum Warahmatullahi Wabarakatuh</p>
+  </footer>
+</main>
+
+<script>
+(function () {
+  // Hitung mundur ke akad nikah (WIB)
+  var target = new Date('2027-03-27T08:00:00+10:00').getTime();
+  var box = document.getElementById('count');
+  function pad(n) { return n < 10 ? '0' + n : '' + n; }
+  function tick() {
+    var diff = target - Date.now();
+    if (diff <= 0) { box.innerHTML = '<div><b>Hari ini!</b></div>'; return false; }
+    var s = Math.floor(diff / 1000);
+    document.getElementById('cd-d').textContent = Math.floor(s / 86400);
+    document.getElementById('cd-h').textContent = pad(Math.floor(s % 86400 / 3600));
+    document.getElementById('cd-m').textContent = pad(Math.floor(s % 3600 / 60));
+    document.getElementById('cd-s').textContent = pad(s % 60);
+    return true;
+  }
+  if (tick()) { var t = setInterval(function () { if (!tick()) clearInterval(t); }, 1000); }
+
+  // Playlist lagu MP3. Simpan semua file musik satu folder dengan index.html.
+  var playlist = [
+    { name: 'Sinarengan · Restianade', src: '01 - Sinarengan - Restianade.mp3' },
+    { name: 'Widodari · Woro Widowati', src: '02 - Widodari - Woro Widowati.mp3' },
+    { name: 'Ndoro Ayu · Cindi Cintya feat. Didik Budi', src: '03 - Ndoro Ayu - Cindi Cintya.mp3' }
+  ];
+  var cur = 0, playing = false, audio = new Audio();
+  audio.preload = 'metadata';
+  var bars = document.getElementById('bars'), ico = document.getElementById('ico'),
+      track = document.getElementById('track'), playBtn = document.getElementById('play');
+
+  function setUI() {
+    bars.classList.toggle('on', playing);
+    ico.innerHTML = playing
+      ? '<path d="M7 5h4v14H7zM13 5h4v14h-4z"/>'
+      : '<path d="M8 5v14l11-7z"/>';
+    playBtn.setAttribute('aria-label', playing ? 'Jeda musik' : 'Putar musik');
+    track.textContent = playlist[cur].name;
+  }
+  function start() {
+    var promise = audio.play();
+    if (promise && promise.then) {
+      promise.then(function () { playing = true; setUI(); })
+        .catch(function () { playing = false; setUI(); });
+    } else { playing = true; setUI(); }
+  }
+  function loadTrack(autoplay) {
+    audio.src = playlist[cur].src;
+    audio.load();
+    setUI();
+    if (autoplay) start();
+  }
+  function stop() { audio.pause(); playing = false; setUI(); }
+  audio.addEventListener('play', function () { playing = true; setUI(); });
+  audio.addEventListener('pause', function () { playing = false; setUI(); });
+  audio.addEventListener('ended', function () {
+    if (cur < playlist.length - 1) { cur++; loadTrack(true); }
+    else { playing = false; setUI(); }
+  });
+  playBtn.addEventListener('click', function () { playing ? stop() : start(); });
+  document.getElementById('next').addEventListener('click', function () {
+    cur = (cur + 1) % playlist.length; loadTrack(playing);
+  });
+  document.getElementById('prev').addEventListener('click', function () {
+    cur = (cur + playlist.length - 1) % playlist.length; loadTrack(playing);
+  });
+  loadTrack(false);
+  setUI();
+
+  // Konfirmasi lewat WhatsApp (ganti nomor dengan nomor mempelai, format 62...)
+  var WA_NUMBER = '6281234567890';
+  var nama = document.getElementById('nama'), jumlah = document.getElementById('jumlah'),
+      ucapan = document.getElementById('ucapan'), wa = document.getElementById('wa'), waNote = document.getElementById('wa-note');
+  function update() {
+    var name = nama.value.trim();
+    var status = document.querySelector('input[name="hadir"]:checked').value;
+    if (!name) { wa.setAttribute('aria-disabled', 'true'); wa.href = '#'; waNote.textContent = 'Isi nama Anda terlebih dahulu.'; return; }
+    var msg = 'Assalamu’alaikum, saya ' + name + '. ' + status + ' di pernikahan Fia & Romi (27 Maret 2027), jumlah tamu ' + jumlah.value + '.' +
+      (ucapan.value.trim() ? ' Ucapan: ' + ucapan.value.trim() : '');
+    wa.href = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(msg);
+    wa.removeAttribute('aria-disabled');
+    waNote.textContent = 'WhatsApp akan terbuka dengan pesan yang sudah terisi.';
+  }
+  var form = document.getElementById('rsvp');
+  form.addEventListener('input', update);
+  form.addEventListener('submit', function (e) { e.preventDefault(); });
+  wa.addEventListener('click', function (e) { if (wa.getAttribute('aria-disabled') === 'true') e.preventDefault(); });
+  update();
+
+  // Salin rekening
+  var copyNote = document.getElementById('copy-note');
+  document.getElementById('copy').addEventListener('click', function () {
+    var el = document.getElementById('rek');
+    var text = el.textContent.replace(/\s/g, '');
+    function fallback() {
+      var r = document.createRange(); r.selectNodeContents(el);
+      var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+      copyNote.textContent = 'Nomor terpilih. Tekan dan tahan untuk menyalin.';
+    }
+    try { navigator.clipboard.writeText(text).then(function () { copyNote.textContent = 'Nomor rekening disalin.'; }, fallback); }
+    catch (err) { fallback(); }
+  });
+})();
+</script>
+
+</body></html>
